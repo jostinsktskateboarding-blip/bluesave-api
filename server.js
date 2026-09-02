@@ -44,7 +44,8 @@ function runYtDlp(url, output) {
   return new Promise((resolve, reject) => {
     const args = [
       '--no-playlist', '--no-warnings', '--restrict-filenames',
-      '-f', 'bv*+ba/b', '--merge-output-format', 'mp4',
+      '-f', 'play_addr_h264/play_addr_bytevc1/play_addr/h264_540p/download_addr/bv*+ba/b',
+      '--merge-output-format', 'mp4',
       '-o', output, url
     ];
     const child = spawn('yt-dlp', args, { stdio: ['ignore', 'pipe', 'pipe'] });
